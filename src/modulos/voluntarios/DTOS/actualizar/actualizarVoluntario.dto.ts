@@ -6,4 +6,4 @@ export interface ActualizarVoluntarioDTO {
   correo_electronico?: string;
   direccion?: string;
   estado?: "Activo" | "Inactivo";
-}
+} //actualizar voluntarios
