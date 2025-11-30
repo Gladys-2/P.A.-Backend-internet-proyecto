@@ -5,8 +5,8 @@ export const seedRefugios = async () => {
   const repo = AppDataSource.getRepository(Refugio);
 
   const refugios = [
-    { nombre: "Albergue La Paz", direccion: "Av. Principal 123", ciudad: "La Paz", departamento: "La Paz", telefono: "12345678", correo_electronico: "contacto@alberguelapaz.com" },
-    { nombre: "Albergue Santa Cruz", direccion: "Calle Falsa 456", ciudad: "Santa Cruz", departamento: "Santa Cruz", telefono: "87654321", correo_electronico: "contacto@alberguesc.com" }
+    { nombre: "Albergue Patitas", direccion: "Av. Principal 123", ciudad: "La Paz", departamento: "La Paz", telefono: "12345678", correo_electronico: "contacto@alberguepatitas.com" },
+    { nombre: "Albergue huellitas", direccion: "Calle Bush 456", ciudad: "La Paz", departamento: "La Paz", telefono: "87654321", correo_electronico: "contacto@alberguehuellitas.com" }
   ];
 
   for (const r of refugios) {
