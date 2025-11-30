@@ -13,4 +13,4 @@ router.get("/", obtenerDonacionesController);
 router.put("/actualizar-donacion/:id", actualizarDonacionController);
 router.delete("/eliminar-donacion/:id", eliminarDonacionController);
 
-export default router;
+export default router; //rutas de donaciones
