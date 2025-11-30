@@ -26,4 +26,4 @@ export class VoluntariosService {
     }
     return false;
   }
-}
+} //servicio voluntario
