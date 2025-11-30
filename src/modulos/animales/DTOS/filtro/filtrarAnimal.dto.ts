@@ -3,4 +3,4 @@ export interface FiltrarAnimalDTO {
   especie?: string;
   raza?: string;
   estado?: "Disponible" | "Adoptado";
-}
+} // buscar o filtrar animales
