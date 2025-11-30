@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn } from "typeorm";
 import { Usuario } from "../../usuarios/entidades/usuario.entity";
 
 @Entity("donaciones")
@@ -18,6 +18,21 @@ export class Donacion {
   @Column({ type: "varchar", length: 150, nullable: true })
   descripcion: string | undefined;
 
-  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
+  @CreateDateColumn({ type: "timestamp" })
   fechaDonacion: Date | undefined;
+
+  @Column({ type: "varchar", length: 50, default: "Efectivo" })
+  metodo: "Efectivo" | "Transferencia" | "PayPal" | "Otro" | undefined;
+
+  @Column({ type: "varchar", length: 20, default: "Pendiente" })
+  estado: "Pendiente" | "Aprobada" | "Rechazada" | undefined;
+
+  @Column({ type: "varchar", length: 255, nullable: true })
+  qr?: string;
+
+  @Column({ type: "text", nullable: true })
+  notasInternas?: string;
+
+  @Column({ type: "varchar", length: 255, nullable: true })
+  comprobante?: string;
 }
