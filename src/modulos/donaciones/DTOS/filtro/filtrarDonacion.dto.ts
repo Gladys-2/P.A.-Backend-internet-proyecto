@@ -3,4 +3,4 @@ export interface FiltrarDonacionDTO {
   tipo?: "Dinero" | "Objeto";
   montoMin?: number;
   montoMax?: number;
-}
+} //buscar donacion
