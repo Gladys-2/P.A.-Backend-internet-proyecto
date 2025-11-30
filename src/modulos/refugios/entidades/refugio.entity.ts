@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
+import moment from "moment-timezone";
 
 @Entity("refugios")
 export class Refugio {
@@ -25,4 +26,16 @@ export class Refugio {
 
   @Column({ type: "varchar", length: 10, default: "Activo" })
   estado: "Activo" | "Inactivo" | undefined;
+
+  @CreateDateColumn({ 
+    type: "timestamp", 
+    default: () => "CURRENT_TIMESTAMP" 
+  })
+  fecha_creacion: Date | undefined;
+
+  @UpdateDateColumn({ 
+    type: "timestamp", 
+    default: () => "CURRENT_TIMESTAMP" 
+  })
+  fecha_modificacion: Date | undefined;
 }
