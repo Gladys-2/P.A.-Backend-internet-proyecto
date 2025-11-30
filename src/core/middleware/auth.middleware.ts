@@ -24,4 +24,5 @@ export const authMiddleware = (
   } catch (error) {
     return res.status(401).json({ message: "Token inválido" });
   }
-};
+}; //proteger rutas en tu página web
+// su función principal es verificar que el usuario esté autenticado antes de permitirle acceder a ciertos recursos o acciones.
