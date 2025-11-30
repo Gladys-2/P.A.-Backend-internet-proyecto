@@ -3,4 +3,4 @@ export interface CrearDonacionDTO {
   monto: number;
   tipo?: "Dinero" | "Objeto";
   descripcion?: string;
-}
+} //crear donacion
