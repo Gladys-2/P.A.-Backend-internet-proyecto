@@ -7,4 +7,4 @@ export class ActualizarUsuarioDTO {
   correo_electronico?: string | undefined;
   contrasena?: string | undefined;
   estado?: "Activo" | "Inactivo";
-}
+} //act.usuario
