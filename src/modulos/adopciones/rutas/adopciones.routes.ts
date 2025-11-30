@@ -1,4 +1,3 @@
-// src/modulos/adopciones/rutas/adopciones.routes.ts
 import { Router } from "express";
 import {
   crearAdopcionController,
@@ -15,3 +14,4 @@ router.put("/actualizar-adopcion/:id", actualizarAdopcionController);
 router.delete("/eliminar-adopcion/:id", eliminarAdopcionController);
 
 export default router;
+// routes son caminos o direcciones que el servidor escucha para saber qué hacer cuando alguien pide algo.
