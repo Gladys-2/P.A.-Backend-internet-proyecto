@@ -23,4 +23,4 @@ export const actualizarRolController = async (req: Request, res: Response) => {
 export const eliminarRolController = async (req: Request, res: Response) => {
   const resultado = await service.eliminarRol(Number(req.params.id));
   res.json({ message: "Rol eliminado", data: resultado });
-};
+}; //controlador de roles
