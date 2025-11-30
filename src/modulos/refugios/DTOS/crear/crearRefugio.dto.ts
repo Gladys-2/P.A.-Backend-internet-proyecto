@@ -6,4 +6,4 @@ export interface CrearRefugioDTO {
   telefono?: string;
   correo_electronico?: string;
   estado?: "Activo" | "Inactivo";
-}
+} //crear refugios
