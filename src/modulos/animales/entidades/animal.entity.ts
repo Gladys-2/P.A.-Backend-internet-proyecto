@@ -1,3 +1,4 @@
+import moment from "moment";
 import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert, BeforeUpdate } from "typeorm";
 
 @Entity("animales")
@@ -24,5 +25,28 @@ export class Animal {
   descripcion?: string;
 
   @Column({ type: "varchar", length: 200, nullable: true })
-  foto?: string;
+  foto: string | undefined;
+
+  @Column({ type: "varchar", length: 10, nullable: true })
+  sexo: "Macho" | "Hembra" | undefined;
+
+  @Column({ type: "varchar", length: 20, nullable: true })
+  tamano: "Pequeño" | "Mediano" | "Grande" | undefined;
+
+  @Column({ type: "float", nullable: true })
+  peso: number | undefined;
+
+  @Column({ type: "boolean", default: false })
+  vacunado: boolean = false;
+
+  @Column({ type: "boolean", default: false })
+  esterilizado: boolean = false;
+
+    @Column({ type: "timestamp" })
+  fechaIngreso: Date | undefined;
+
+  @BeforeInsert()
+  setFechaIngreso() {
+    this.fechaIngreso = moment().tz("America/La_Paz").toDate();
+  }
 }
