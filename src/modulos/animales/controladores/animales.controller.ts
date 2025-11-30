@@ -9,7 +9,7 @@ const service = new AnimalesService();
 export const crearAnimalController = async (req: Request, res: Response) => {
   const data: CrearAnimalDTO = req.body;
   const animal = await service.crearAnimal(data);
-  res.json({ message: "Animal creado", data: animal });
+  res.json({ message: "El animal fue creado con exito..", data: animal });
 };
 
 export const obtenerAnimalesController = async (req: Request, res: Response) => {
@@ -21,10 +21,10 @@ export const obtenerAnimalesController = async (req: Request, res: Response) => 
 export const actualizarAnimalController = async (req: Request, res: Response) => {
   const data: ActualizarAnimalDTO = req.body;
   const animal = await service.actualizarAnimal(Number(req.params.id), data);
-  res.json({ message: "Animal actualizado", data: animal });
+  res.json({ message: "Actualizacion del animal", data: animal });
 };
 
 export const eliminarAnimalController = async (req: Request, res: Response) => {
   const animal = await service.eliminarAnimal(Number(req.params.id));
-  res.json({ message: "Animal eliminado", data: animal });
+  res.json({ message: "el animal fue eliminado", data: animal });
 };
