@@ -6,3 +6,4 @@ export const loggerMiddleware = (req: Request, res: Response, next: NextFunction
   console.log(`[${horaBolivia}] ${req.method} ${req.url}`);
   next();
 };
+//registra información de cada petición
