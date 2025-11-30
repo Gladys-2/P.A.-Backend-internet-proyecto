@@ -9,7 +9,7 @@ const service = new AdopcionesService();
 export const crearAdopcionController = async (req: Request, res: Response) => {
   const data: CrearAdopcionDTO = req.body;
   const adopcion = await service.crearAdopcion(data);
-  res.json({ message: "Adopción creada", data: adopcion });
+  res.json({ message: "la adopción creada..", data: adopcion });
 };
 
 export const obtenerAdopcionesController = async (req: Request, res: Response) => {
@@ -21,10 +21,10 @@ export const obtenerAdopcionesController = async (req: Request, res: Response) =
 export const actualizarAdopcionController = async (req: Request, res: Response) => {
   const data: ActualizarAdopcionDTO = req.body;
   const adopcion = await service.actualizarAdopcion(Number(req.params.id), data);
-  res.json({ message: "Adopción actualizada", data: adopcion });
+  res.json({ message: "la adopción actualizada", data: adopcion });
 };
 
 export const eliminarAdopcionController = async (req: Request, res: Response) => {
   const adopcion = await service.eliminarAdopcion(Number(req.params.id));
-  res.json({ message: "Adopción eliminada", data: adopcion });
+  res.json({ message: "la adopción  fue eliminada", data: adopcion });
 };
