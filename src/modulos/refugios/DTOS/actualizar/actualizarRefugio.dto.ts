@@ -6,4 +6,4 @@ export interface ActualizarRefugioDTO {
   telefono?: string;
   correo_electronico?: string;
   estado?: "Activo" | "Inactivo";
-}
+} //act.refugios
