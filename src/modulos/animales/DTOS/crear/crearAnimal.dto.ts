@@ -5,4 +5,4 @@ export interface CrearAnimalDTO {
   edad: number;
   descripcion?: string;
   foto?: string;
-}
+} // actualizar los animales
