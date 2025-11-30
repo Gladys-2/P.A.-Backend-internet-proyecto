@@ -27,4 +27,4 @@ export class UsuarioRol {
 
   @Column({ type: "varchar", length: 10, default: "Activo" })
   estado: "Activo" | "Inactivo" | undefined;
-}
+} //usuarioRol.entity
