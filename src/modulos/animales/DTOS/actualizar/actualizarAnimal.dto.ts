@@ -6,4 +6,4 @@ export interface ActualizarAnimalDTO {
   estado?: "Disponible" | "Adoptado";
   descripcion?: string;
   foto?: string;
-}
+} //actualizar los datos de un animal.
