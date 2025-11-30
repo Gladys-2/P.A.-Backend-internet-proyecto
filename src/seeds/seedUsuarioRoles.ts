@@ -8,8 +8,8 @@ export const seedUsuarioRoles = async () => {
   const usuarioRepo = AppDataSource.getRepository(Usuario);
   const rolRepo = AppDataSource.getRepository(Rol);
 
-  const usuario = await usuarioRepo.findOneBy({ correo_electronico: "juan@example.com" });
-  const rol = await rolRepo.findOneBy({ nombre: "administrador" });
+  const usuario = await usuarioRepo.findOneBy({ correo_electronico: "Administrador@gmail.com" });
+  const rol = await rolRepo.findOneBy({ nombre: "Administrador" });
 
   if (usuario && rol) {
     const usuarioRol = repo.create({ usuario, rol });
