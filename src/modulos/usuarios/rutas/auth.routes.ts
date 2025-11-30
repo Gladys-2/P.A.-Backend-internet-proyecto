@@ -11,4 +11,4 @@ router.get("/test", (_req: Request, res: Response) => {
 });
 router.post("/login", loginUsuarioController);
 
-export default router;
+export default router; //rutas..
