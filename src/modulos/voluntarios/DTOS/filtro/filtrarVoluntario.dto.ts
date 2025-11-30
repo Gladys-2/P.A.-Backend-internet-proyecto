@@ -4,4 +4,4 @@ export interface FiltrarVoluntarioDTO {
   apellido_materno?: string;
   correo_electronico?: string;
   estado?: "Activo" | "Inactivo";
-}
+}// filtar voluntarios
