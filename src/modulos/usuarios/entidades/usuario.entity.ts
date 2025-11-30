@@ -44,4 +44,4 @@ export class Usuario {
       this.contrasena = await bcrypt.hash(this.contrasena, 10);
     }
   }
-}
+} //usuario.entity
