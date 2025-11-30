@@ -9,7 +9,7 @@ const service = new DonacionesService();
 export const crearDonacionController = async (req: Request, res: Response) => {
   const data: CrearDonacionDTO = req.body;
   const donacion = await service.crearDonacion(data);
-  res.json({ message: "Donación creada", data: donacion });
+  res.json({ message: "Donación fue creada con exito", data: donacion });
 };
 
 export const obtenerDonacionesController = async (req: Request, res: Response) => {
@@ -26,5 +26,5 @@ export const actualizarDonacionController = async (req: Request, res: Response) 
 
 export const eliminarDonacionController = async (req: Request, res: Response) => {
   const donacion = await service.eliminarDonacion(Number(req.params.id));
-  res.json({ message: "Donación eliminada", data: donacion });
+  res.json({ message: "la donación fue eliminada", data: donacion });
 };
