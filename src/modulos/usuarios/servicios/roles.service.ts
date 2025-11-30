@@ -24,4 +24,4 @@ export class RolesService {
     if (!rol) throw new Error("Rol no encontrado");
     return await this.repo.remove(rol);
   }
-}
+} //servicio de roles..
