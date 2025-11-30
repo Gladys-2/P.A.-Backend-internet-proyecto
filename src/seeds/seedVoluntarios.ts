@@ -5,8 +5,8 @@ export const seedVoluntarios = async () => {
   const repo = AppDataSource.getRepository(Voluntario);
 
   const voluntarios = [
-    { nombre: "Carlos", apellido_paterno: "Ramírez", apellido_materno: "Suárez", telefono: "12345678" },
-    { nombre: "Ana", apellido_paterno: "Torres", apellido_materno: "Paredes", telefono: "87654321" }
+    { nombre: "Esteban", apellido_paterno: "Torrez", apellido_materno: "Suárez", telefono: "12345678" },
+    { nombre: "Paulina", apellido_paterno: "Zabala", apellido_materno: "Paredes", telefono: "87654321" }
   ];
 
   for (const v of voluntarios) {
