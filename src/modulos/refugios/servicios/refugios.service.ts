@@ -29,4 +29,4 @@ export class RefugiosService {
     await refugiosRepository.delete(id);
     return refugio;
   }
-}
+} //servicio de refugio
