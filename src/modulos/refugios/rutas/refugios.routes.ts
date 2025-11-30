@@ -13,4 +13,4 @@ router.get("/", obtenerRefugiosController);
 router.put("/actualizar-refugio/:id", actualizarRefugioController);
 router.delete("/eliminar-refugio/:id", eliminarRefugioController);
 
-export default router;
+export default router; //rutas de regugios
