@@ -8,11 +8,10 @@ export const seedAdopciones = async () => {
   const usuarioRepo = AppDataSource.getRepository(Usuario);
   const animalRepo = AppDataSource.getRepository(Animal);
 
-  const usuario = await usuarioRepo.findOneBy({ correo_electronico: "maria@example.com" });
-  const animal = await animalRepo.findOneBy({ nombre: "Firulais" });
+  const usuario = await usuarioRepo.findOneBy({ correo_electronico: "ximena@gmail.com" });
+  const animal = await animalRepo.findOneBy({ nombre: "Enzo" });
 
   if (usuario && animal) {
-    // Forzamos a TypeScript a aceptar los objetos completos usando `as any`
     const adopcion = repo.create({
       usuario: usuario as any,
       animal: animal as any,
@@ -21,8 +20,8 @@ export const seedAdopciones = async () => {
     });
 
     await repo.save(adopcion);
-    console.log("Adopción creada correctamente!");
+    console.log("la adopción fue creada correctamente :)");
   } else {
-    console.log("No se encontró usuario o animal para crear la adopción.");
+    console.log("No se encontró el usuario o el animal para crear la adopción.");
   }
 };
