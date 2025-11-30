@@ -14,5 +14,5 @@ export const seedAnimales = async () => {
     await repo.save(animal);
   }
 
-  console.log("Animales creados correctamente!");
+  console.log("los animales fueron creados correctamente :)");
 };
