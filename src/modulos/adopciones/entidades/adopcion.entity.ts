@@ -16,6 +16,21 @@ export class Adopcion {
   @Column({ type: "varchar", length: 20, default: "Pendiente" })
   estado: "Pendiente" | "Aprobada" | "Rechazada" | undefined;
 
-  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
+  @Column({ type: "timestamp" })
   fechaSolicitud: Date | undefined;
+
+  @Column({ type: "timestamp", nullable: true })
+  fechaAprobacion: Date | undefined;
+
+  @Column({ type: "timestamp", nullable: true })
+  fechaRechazo: Date | undefined;
+
+  @Column({ type: "text", nullable: true })
+  motivoRechazo: string | undefined;
+
+  @Column({ type: "text", nullable: true })
+  comentarios: string | undefined;
+
+  @Column({ default: true })
+  activo: boolean | undefined;
 }
