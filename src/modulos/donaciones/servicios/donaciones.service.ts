@@ -8,7 +8,7 @@ import { AppDataSource } from "../../../config/basedatos";
 export class DonacionesService {
   async crearDonacion(data: CrearDonacionDTO) {
     const usuario = await AppDataSource.getRepository(Usuario).findOneBy({ id: data.usuarioId });
-    if (!usuario) throw new Error("Usuario no encontrado");
+    if (!usuario) throw new Error("Usuario no fue encontrado");
 
     const donacion = donacionesRepository.create({
       usuario,
@@ -38,7 +38,7 @@ export class DonacionesService {
 
   async eliminarDonacion(id: number) {
     const donacion = await donacionesRepository.findOneBy({ id });
-    if (!donacion) throw new Error("Donación no encontrada");
+    if (!donacion) throw new Error("Donación no fue encontrada");
     await donacionesRepository.delete(id);
     return donacion;
   }
