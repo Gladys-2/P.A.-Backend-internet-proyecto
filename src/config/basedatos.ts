@@ -1,38 +1,25 @@
-import { DataSource } from "typeorm";
+import { DataSource } from "typeorm"; //DataSource viene de TypeORM manejar BD de forma mas facil en node.jsy typescript
 import "dotenv/config";
-
-// Entidades de usuarios
+//estas son las entidades
 import { Usuario } from "../modulos/usuarios/entidades/usuario.entity";
 import { Rol } from "../modulos/usuarios/entidades/rol.entity";
 import { UsuarioRol } from "../modulos/usuarios/entidades/usuarioRol.entity";
-
-// Entidades de animales
 import { Animal } from "../modulos/animales/entidades/animal.entity";
-
-// Entidades de adopciones
 import { Adopcion } from "../modulos/adopciones/entidades/adopcion.entity";
-
-// Entidades de voluntarios
 import { Voluntario } from "../modulos/voluntarios/entidades/voluntario.entity";
-
-// Entidades de donaciones
 import { Donacion } from "../modulos/donaciones/entidades/donacion.entity";
-
-// Entidades de refugios
 import { Refugio } from "../modulos/refugios/entidades/refugio.entity";
-
-// Entidades de auditoría
 import { Auditoria } from "../core/entidades/auditoria.entity";
 
 export const AppDataSource = new DataSource({
-  type: "postgres",
+  type: "postgres", //indica que tu base de datos es PostgreSQL.
   host: process.env.DB_HOST,
   port: Number(process.env.DB_PORT),
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  synchronize: true, // Para desarrollo. En producción usa migraciones
-  logging: false,
+  synchronize: true, // esto crea automaticamente las tablas solo que aun no esta en desarrollo.no en produccion
+  logging: false,//desactiva los registros automáticos de consultas en consola.
   entities: [
     Usuario,
     Rol,
