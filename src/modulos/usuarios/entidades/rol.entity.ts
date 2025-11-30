@@ -14,4 +14,4 @@ export class Rol {
 
   @OneToMany(() => UsuarioRol, (usuarioRol) => usuarioRol.rol)
   usuariosAsignados: UsuarioRol[] | undefined;
-}
+} //rol.entity
