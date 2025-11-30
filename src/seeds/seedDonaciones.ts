@@ -14,7 +14,7 @@ export const seedDonaciones = async () => {
   }
 
   const donaciones: Partial<Donacion>[] = [
-    { usuario, monto: 50, tipo: "Dinero", descripcion: "Donación en efectivo" },
+    { usuario, monto: 90, tipo: "Dinero", descripcion: "Donación en efectivo" },
     { usuario, monto: 100, tipo: "Objeto", descripcion: "Donación de alimentos" }
   ];
 
@@ -23,5 +23,5 @@ export const seedDonaciones = async () => {
     await repo.save(donacion);
   }
 
-  console.log("Donaciones creadas correctamente!");
+  console.log("las donaciones fueron creadas exitosamente");
 };
