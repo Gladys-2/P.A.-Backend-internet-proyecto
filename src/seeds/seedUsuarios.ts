@@ -20,7 +20,7 @@ export const seedUsuarios = async () => {
       apellido_materno: "admin",
       correo_electronico: "administrador@gmail.com",
       contrasena: "admi-123",
-      rol: "administrador", // <- corregido a minúscula
+      rol: "administrador", 
       estado: "Activo"
     }
   ];
@@ -30,5 +30,5 @@ export const seedUsuarios = async () => {
     await repo.save(usuario);
   }
 
-  console.log("Usuarios creados correctamente!");
+  console.log("Usuarios creados..");
 };
