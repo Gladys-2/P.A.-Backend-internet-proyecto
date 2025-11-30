@@ -14,3 +14,4 @@ router.put("/actualizar-animal/:id", actualizarAnimalController);
 router.delete("/eliminar-animal/:id", eliminarAnimalController);
 
 export default router;
+//rutas de animales
