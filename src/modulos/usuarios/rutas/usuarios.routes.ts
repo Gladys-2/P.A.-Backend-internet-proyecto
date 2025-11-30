@@ -14,4 +14,4 @@ router.get("/:id", obtenerUsuarioPorIdController);
 router.put("/actualizar-usuario/:id", actualizarUsuarioController);
 router.delete("/eliminar-usuario/:id", eliminarUsuarioController);
 
-export default router;
+export default router; //rutas de usuario
