@@ -18,4 +18,4 @@ export const RolRepository = AppDataSource.getRepository(Rol).extend({
       where: { id }
     });
   }
-});
+}); //rol repository..
