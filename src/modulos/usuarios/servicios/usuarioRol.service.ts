@@ -34,4 +34,4 @@ export class UsuarioRolService {
   async eliminar(id: number) {
     return await this.repo.delete(id);
   }
-}
+} //servicio de usuarioRol..
