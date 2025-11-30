@@ -18,4 +18,4 @@ export const UsuarioRolRepository = AppDataSource.getRepository(UsuarioRol).exte
       relations: ["usuario", "rol"]
     });
   }
-});
+}); //usuarioRol.repository
