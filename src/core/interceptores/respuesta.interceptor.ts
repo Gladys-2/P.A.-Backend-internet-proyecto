@@ -19,4 +19,4 @@ export const respuestaInterceptor = (
   };
 
   next();
-};
+}; //Este middleware uniforma todas las respuestas de tu API.
