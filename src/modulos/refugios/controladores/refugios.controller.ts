@@ -1,4 +1,3 @@
-// src/modulos/refugios/controladores/refugios.controller.ts
 import { Request, Response } from "express";
 import { RefugiosService } from "../servicios/refugios.service";
 import { CrearRefugioDTO } from "../DTOS/crear/crearRefugio.dto";
