@@ -12,4 +12,4 @@ export const loginUsuarioController = async (req: Request, res: Response) => {
   } catch (error: any) {
     return res.status(400).json({ error: error.message });
   }
-};
+}; //controlador de login de usuario 
