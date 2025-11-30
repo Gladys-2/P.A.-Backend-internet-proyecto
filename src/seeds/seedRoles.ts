@@ -5,8 +5,8 @@ export const seedRoles = async () => {
   const repo = AppDataSource.getRepository(Rol);
 
   const roles = [
-    { nombre: "usuario" },
-    { nombre: "administrador" }
+    { nombre: "Usuario" },
+    { nombre: "Administrador" }
   ];
 
   for (const r of roles) {
