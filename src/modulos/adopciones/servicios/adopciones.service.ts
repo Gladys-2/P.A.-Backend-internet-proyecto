@@ -43,3 +43,4 @@ export class AdopcionesService {
     return adopcion;
   }
 }
+// El servicio centraliza toda la lógica de adopciones para que los controladores solo se encarguen de recibir la petición y enviar la respuesta.
