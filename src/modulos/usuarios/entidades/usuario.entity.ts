@@ -34,6 +34,9 @@ export class Usuario {
   @Column({ type: "varchar", length: 20, default: "usuario" })
   rol: "usuario" | "administrador" | undefined;
 
+  @Column({ type: "enum", enum: ["M", "F", "O"], default: "M" }) // <- agregas esto
+  genero: "M" | "F" | "O" | undefined;
+  
   @Column({ type: "varchar", length: 10, default: "Activo" })
   estado: "Activo" | "Inactivo" | undefined;
 
