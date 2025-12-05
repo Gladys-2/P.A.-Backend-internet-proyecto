@@ -3,7 +3,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 @Entity("auditorias")
 export class Auditoria {
   @PrimaryGeneratedColumn()
-  id: number | undefined; 
+  id: number | undefined;  //id-->identificador único
 
   @Column({ type: "varchar", length: 20, default: "Activo" })
   estado: string | undefined; 
