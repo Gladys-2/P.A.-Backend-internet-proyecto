@@ -1,4 +1,4 @@
 export interface ActualizarAdopcionDTO {
   estado?: "Pendiente" | "Aprobada" | "Rechazada";
+  motivoRechazo?: string;
 }
-//DTO(Data transfer Object)--> que datos se pueden recibir

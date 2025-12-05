@@ -1,5 +1,5 @@
 export interface CrearAdopcionDTO {
   usuarioId: number;
   animalId: number;
+  comentarios?: string;
 }
-//crear una adopción con usuarioId y animalId.
