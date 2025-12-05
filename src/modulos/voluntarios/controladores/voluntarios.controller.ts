@@ -7,7 +7,7 @@ const service = new VoluntariosService();
 export const crearVoluntarioController = async (req: Request, res: Response) => {
   const data: CrearVoluntarioDTO = req.body;
   const voluntario = await service.crear(data);
-  res.json({ message: "Voluntario fue creado exitosamentee..", data: voluntario });
+  res.json({ message: "Voluntario creado exitosamente", data: voluntario });
 };
 
 export const obtenerVoluntariosController = async (_req: Request, res: Response) => {
@@ -22,5 +22,5 @@ export const actualizarVoluntarioController = async (req: Request, res: Response
 
 export const eliminarVoluntarioController = async (req: Request, res: Response) => {
   const resultado = await service.eliminar(Number(req.params.id));
-  res.json({ message: "Voluntario fue eliminado", data: resultado });
+  res.json({ message: "Voluntario eliminado", data: resultado });
 };

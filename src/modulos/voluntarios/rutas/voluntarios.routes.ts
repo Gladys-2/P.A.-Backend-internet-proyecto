@@ -13,4 +13,4 @@ router.get("/listar-voluntarios", obtenerVoluntariosController);
 router.put("/actualizar-voluntario/:id", actualizarVoluntarioController);
 router.delete("/eliminar-voluntario/:id", eliminarVoluntarioController);
 
-export default router; //rutas de voluntario
+export default router;
