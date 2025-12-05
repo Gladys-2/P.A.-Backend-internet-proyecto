@@ -2,8 +2,9 @@ export interface ActualizarVoluntarioDTO {
   nombre?: string;
   apellido_paterno?: string;
   apellido_materno?: string;
-  telefono?: string;
   correo_electronico?: string;
-  direccion?: string;
+  telefono?: string;
+  areaAsignada?: string;
+  disponibilidad?: string;
   estado?: "Activo" | "Inactivo";
-} //actualizar voluntarios
+}
