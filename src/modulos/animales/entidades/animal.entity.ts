@@ -18,8 +18,8 @@ export class Animal {
   @Column({ type: "int" })
   edad: number | undefined;
 
-  @Column({ type: "varchar", length: 10, default: "Disponible" })
-  estado: "Disponible" | "Adoptado" | undefined;
+  @Column({ type: "varchar", length: 20, default: "Disponible" })
+  estado_animal: "Disponible" | "Adoptado" | "En cuidado" | undefined;
 
   @Column({ type: "text", nullable: true })
   descripcion?: string;
@@ -39,10 +39,13 @@ export class Animal {
   @Column({ type: "boolean", default: false })
   vacunado: boolean = false;
 
+  @Column({ type: "varchar", length: 10, nullable: true })
+  estado?: "Activo" | "Inactivo";
+
   @Column({ type: "boolean", default: false })
   esterilizado: boolean = false;
 
-    @Column({ type: "timestamp" })
+  @Column({ type: "timestamp" })
   fechaIngreso: Date | undefined;
 
   @BeforeInsert()
