@@ -1,17 +1,18 @@
 import { Router } from "express";
 import {
-  crearAnimalController,
-  obtenerAnimalesController,
-  actualizarAnimalController,
-  eliminarAnimalController
+  obtenerAnimales,
+  obtenerAnimalPorId,
+  crearAnimal,
+  actualizarAnimal,
+  toggleEstadoAnimal
 } from "../controladores/animales.controller";
 
 const router = Router();
 
-router.post("/crear-animal", crearAnimalController);
-router.get("/", obtenerAnimalesController);
-router.put("/actualizar-animal/:id", actualizarAnimalController);
-router.delete("/eliminar-animal/:id", eliminarAnimalController);
+router.get("/", obtenerAnimales);
+router.get("/:id", obtenerAnimalPorId);
+router.post("/crear-animal", crearAnimal);
+router.put("/editar-animal/:id", actualizarAnimal);
+router.patch("/:id/cambiar-estado-animal", toggleEstadoAnimal);
 
 export default router;
-//rutas de animales
