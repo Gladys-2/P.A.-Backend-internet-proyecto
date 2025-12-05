@@ -3,7 +3,7 @@ export interface ActualizarAnimalDTO {
   especie?: string;
   raza?: string;
   edad?: number;
-  estado?: "Disponible" | "Adoptado";
   descripcion?: string;
   foto?: string;
-} //actualizar los datos de un animal.
+  estado_animal?: "Disponible" | "Adoptado" | "En cuidado";
+}
