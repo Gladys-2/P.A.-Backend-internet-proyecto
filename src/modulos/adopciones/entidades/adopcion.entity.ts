@@ -20,17 +20,17 @@ export class Adopcion {
   fechaSolicitud: Date | undefined;
 
   @Column({ type: "timestamp", nullable: true })
-  fechaAprobacion: Date | undefined;
+  fechaAprobacion: Date | null | undefined;
 
   @Column({ type: "timestamp", nullable: true })
-  fechaRechazo: Date | undefined;
+  fechaRechazo: Date | null | undefined;
 
   @Column({ type: "text", nullable: true })
-  motivoRechazo: string | undefined;
+  motivoRechazo: string | null | undefined;
 
   @Column({ type: "text", nullable: true })
-  comentarios: string | undefined;
+  comentarios: string | null | undefined;
 
-  @Column({ default: true })
-  activo: boolean | undefined;
+  @Column({ type: "boolean", default: true })
+  activo!: boolean;
 }
