@@ -5,13 +5,14 @@ import {
   obtenerUsuarioPorIdController,
   actualizarUsuarioController,
   eliminarUsuarioController,
-} from "../controladores/usuarios.controller"
+} from "../controladores/usuarios.controller";
+
 const router = Router();
 
-router.post("/crear-usuario", crearUsuarioController);
+router.post("/registro", crearUsuarioController);
 router.get("/", obtenerUsuariosController);
 router.get("/:id", obtenerUsuarioPorIdController);
-router.put("/actualizar-usuario/:id", actualizarUsuarioController);
-router.delete("/eliminar-usuario/:id", eliminarUsuarioController);
+router.put("/:id", actualizarUsuarioController);
+router.delete("/:id", eliminarUsuarioController);
 
-export default router; //rutas de usuario
+export default router;
