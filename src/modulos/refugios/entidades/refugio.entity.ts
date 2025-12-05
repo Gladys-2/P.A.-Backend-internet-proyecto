@@ -1,5 +1,4 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
-import moment from "moment-timezone";
 
 @Entity("refugios")
 export class Refugio {
