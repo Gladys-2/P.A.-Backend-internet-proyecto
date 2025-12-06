@@ -1,4 +1,4 @@
-export class LoginUsuarioDTO {
-  correo_electronico: string | undefined;
-  contrasena: string | undefined;
-}//login usuario
+export interface LoginUsuarioDTO {
+  correo_electronico: string;
+  contrasena: string;
+}
