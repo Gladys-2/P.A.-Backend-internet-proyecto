@@ -34,11 +34,17 @@ export class Usuario {
   @Column({ type: "varchar", length: 20, default: "usuario" })
   rol: "usuario" | "administrador" | undefined;
 
-  @Column({ type: "enum", enum: ["M", "F", "O"], default: "M" }) // <- agregas esto
+  @Column({ type: "enum", enum: ["M", "F", "O"], default: "M" })
   genero: "M" | "F" | "O" | undefined;
-  
+
   @Column({ type: "varchar", length: 10, default: "Activo" })
   estado: "Activo" | "Inactivo" | undefined;
+
+  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
+  fechaCreacion: Date | undefined;
+
+  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP", onUpdate: "CURRENT_TIMESTAMP" })
+  fechaModificacion: Date | undefined;
 
   @BeforeInsert()
   @BeforeUpdate()
@@ -47,4 +53,4 @@ export class Usuario {
       this.contrasena = await bcrypt.hash(this.contrasena, 10);
     }
   }
-} //usuario.entity
+}
