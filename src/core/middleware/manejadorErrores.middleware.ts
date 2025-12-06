@@ -6,7 +6,7 @@ export const manejadorErroresMiddleware = (
   res: Response,
   next: NextFunction
 ) => {
-  console.error(error); // Muestra el error en consola
+  console.error(error); 
   res.status(error.status || 500).json({
     success: false,
     message: error.message || "fue un error interno del servidor",
