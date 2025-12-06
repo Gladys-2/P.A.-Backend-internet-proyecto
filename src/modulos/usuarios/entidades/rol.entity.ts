@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { UsuarioRol } from "./usuarioRol.entity";
 
 @Entity("roles")
@@ -14,4 +14,13 @@ export class Rol {
 
   @OneToMany(() => UsuarioRol, (usuarioRol) => usuarioRol.rol)
   usuariosAsignados: UsuarioRol[] | undefined;
-} //rol.entity
+
+  @Column({ type: "boolean", default: true })
+  activo: boolean | undefined;
+
+  @CreateDateColumn({ type: "timestamp" })
+  fechaCreacion: Date | undefined;
+
+  @UpdateDateColumn({ type: "timestamp" })
+  fechaModificacion: Date | undefined;
+}
