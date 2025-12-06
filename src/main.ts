@@ -12,6 +12,8 @@ import adopcionesRoutes from "./modulos/adopciones/rutas/adopciones.routes";
 import voluntariosRoutes from "./modulos/voluntarios/rutas/voluntarios.routes";
 import donacionesRoutes from "./modulos/donaciones/rutas/donaciones.routes";
 import refugiosRoutes from "./modulos/refugios/rutas/refugios.routes";
+import testRoutes from "./modulos/usuarios/rutas/test.routes";
+
 
 dotenv.config();
 
@@ -36,6 +38,7 @@ app.use("/api/adopciones", adopcionesRoutes);
 app.use("/api/voluntarios", voluntariosRoutes);
 app.use("/api/donaciones", donacionesRoutes);
 app.use("/api/refugios", refugiosRoutes);
+app.use("/api/test", testRoutes);
 app.get("/", (_req: Request, res: Response) => {
   res.send("la api funcionando corectamente de animales :)");
 });
