@@ -11,7 +11,8 @@ export const crearAdopcionController = async (req: Request, res: Response) => {
     res.status(201).json(adopcion);
   } catch (err: any) {
     console.error(err);
-    res.status(500).json({ msg: err.message || "Error al crear adopción" });
+    // Cambiamos a 400 porque es error de validación (usuario ya tiene adopción)
+    res.status(400).json({ msg: err.message || "Error al crear adopción" });
   }
 };
 

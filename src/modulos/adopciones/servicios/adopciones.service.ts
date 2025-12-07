@@ -9,12 +9,25 @@ import { FiltrarAdopcionDTO } from "../DTOS/filtro/filtrarAdopcion.dto";
 export class AdopcionesService {
   private adopcionesRepo = AppDataSource.getRepository(Adopcion);
 
+  // Crear adopción con validación de 1 adopción activa por usuario
   async crearAdopcion(data: CrearAdopcionDTO) {
     const usuario = await AppDataSource.getRepository(Usuario).findOneBy({ id: data.usuarioId });
     const animal = await AppDataSource.getRepository(Animal).findOneBy({ id: data.animalId });
 
     if (!usuario) throw new Error("Usuario no encontrado");
     if (!animal) throw new Error("Animal no encontrado");
+
+    // ✅ Validar adopción activa
+    const adopcionesActivas = await this.adopcionesRepo.find({
+      where: [
+        { usuario: { id: usuario.id }, estado: "Pendiente" },
+        { usuario: { id: usuario.id }, estado: "Aprobada" }
+      ]
+    });
+
+    if (adopcionesActivas.length > 0) {
+      throw new Error("Solo puedes tener una adopción activa");
+    }
 
     const adopcion = this.adopcionesRepo.create({
       usuario,
@@ -23,6 +36,7 @@ export class AdopcionesService {
       comentarios: data.comentarios || null,
       fechaSolicitud: new Date(),
     });
+
     return await this.adopcionesRepo.save(adopcion);
   }
 
@@ -34,7 +48,7 @@ export class AdopcionesService {
 
     return await this.adopcionesRepo.find({
       where,
-      relations: ["usuario", "animal"], // importante para que traiga datos del animal
+      relations: ["usuario", "animal"],
       order: { fechaSolicitud: "DESC" },
     });
   }
